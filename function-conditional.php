@@ -79,11 +79,25 @@ NB: DILARANG menggunakan built-in function PHP seperti strrev() dll. Gunakan loo
 
 
 // Code function di sini
+function palindrome($kata)
+{
+$reverse = "";
+for ($y = strlen($kata) - 1; $y >= 0; $y--) {
+    $reverse .= $kata[$y];
+}
+if ($reverse == $kata) {
+    echo "true";
+} else {
+    echo "false";
+} 
+echo "<br>";
+}
+
 // Hapus komentar di bawah ini untuk jalankan code
-//palindrome("civic") ; // true
-//palindrome("nababan") ; // true
-//palindrome("jambaban"); // false
-//palindrome("racecar"); // true
+palindrome("civic") ; // true
+palindrome("nababan") ; // true
+palindrome("jambaban"); // false
+palindrome("racecar"); // true
 
 
 echo "<h3>Soal No 4 Tentukan Nilai </h3>";
